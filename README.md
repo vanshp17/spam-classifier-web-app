@@ -14,81 +14,62 @@ conda create -p venv python==3.11 -y
 ---
 
 
-# Steps and analysis for the Spam Classification project:
+## [Introduction](#introduction)
+- Spam Classification project focuses on identifying and classifying spam messages from a dataset.
 
-### Step 1: Data Cleaning
-1. **Load and Inspect Data:**
-   - Read the dataset ('spam.csv') into a Pandas DataFrame.
-   - Check a random sample, shape, and info of the dataset.
+## [Features](#features)
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Text preprocessing
+- Model Building
+- Evaluation
+- Improvement
+- Web App
 
-2. **Drop Unnecessary Columns:**
-   - Drop columns 'Unnamed: 2', 'Unnamed: 3', and 'Unnamed: 4' as they seem unnecessary.
+## [Getting Started](#getting-started)
+### [Prerequisites](#prerequisites)
+- Ensure that the required libraries, such as pandas, seaborn, nltk, matplotlib, sklearn, string, etc., are installed.
 
-3. **Rename Columns:**
-   - Rename columns 'v1' to 'target' and 'v2' to 'text'.
+### [Installation](#installation)
+- Install the necessary libraries using the respective package managers.
 
-4. **Label Encoding:**
-   - Encode the 'target' column to numerical values (ham: 0, spam: 1).
+## [Usage](#usage)
+### [Input](#input)
+- The input is a dataset containing message text and their corresponding labels (ham or spam).
 
-5. **Handling Missing Values and Duplicates:**
-   - Check for missing values and duplicates.
-   - Drop duplicate rows to ensure data integrity.
+### [Output](#output)
+- The output includes the results of data analysis, model performance metrics, and visualizations.
 
-### Step 2: Exploratory Data Analysis (EDA)
-6. **Visualize Target Distribution:**
-   - Plot a pie chart to visualize the distribution of 'ham' and 'spam' labels.
-   - Note the class imbalance.
+## [Training](#training)
+### 1. Data Cleaning
+- Remove unnecessary columns.
+- Rename columns for better clarity.
+- Label encoding for the target column.
 
-7. **Character and Word Analysis:**
-   - Calculate the number of characters, words, and sentences in each message.
-   - Explore summary statistics for these metrics and compare ham vs. spam.
+### 2. Exploratory Data Analysis (EDA)
+- Check for missing values and duplicates.
+- Visualize the distribution of ham and spam messages.
+- Analyze the length of characters, words, and sentences.
 
-8. **Histograms and Pairplot:**
-   - Create histograms and a pairplot to visualize the distribution and relationships of features.
+### 3. Text Preprocessing
+- Convert text to lowercase.
+- Tokenization and removal of special characters.
+- Removal of stopwords and punctuation.
+- Stemming.
 
-### Step 3: Data Preprocessing
-9. **Text Preprocessing:**
-   - Implement text preprocessing steps including lowercase conversion, tokenization, removal of special characters, stop words, punctuation, and stemming.
+### 4. Model Building
+- Use different classifiers, including GaussianNB, MultinomialNB, BernoulliNB, SVC, DecisionTreeClassifier, LogisticRegression, RandomForestClassifier, AdaBoostClassifier, BaggingClassifier, ExtraTreesClassifier, GradientBoostingClassifier, XGBClassifier.
+- Evaluate each classifier's accuracy and precision.
 
-10. **Wordclouds:**
-    - Generate wordclouds for both spam and ham messages to visualize frequent words.
+## [Results](#results)
+- Visualize and compare the performance of different classifiers using bar plots.
+- Choose the best-performing classifier.
 
-### Step 4: Model Building
-11. **Vectorization:**
-    - Use TF-IDF vectorizer to convert text data into numerical features.
-    - Explore different vectorization techniques like CountVectorizer.
+## [Contributing](#contributing)
+- Contributions to the project are welcome. Fork the repository, make changes, and submit a pull request.
 
-12. **Train-Test Split:**
-    - Split the data into training and testing sets.
-
-13. **Naive Bayes Models:**
-    - Train and evaluate Gaussian Naive Bayes, Multinomial Naive Bayes, and Bernoulli Naive Bayes models.
-
-14. **Multiple Classifiers:**
-    - Explore the performance of various classifiers (SVM, KNN, Decision Tree, Logistic Regression, Random Forest, AdaBoost, Bagging, Extra Trees, Gradient Boosting, XGBoost).
-
-15. **Performance Visualization:**
-    - Visualize and compare the accuracy and precision scores of different classifiers using bar plots.
-
-### Step 5: Model Improvement
-16. **Hyperparameter Tuning:**
-    - Experiment with changing hyperparameters, such as the max_features parameter in TF-IDF.
-
-17. **Scaling Features:**
-    - Investigate the impact of scaling features on model performance.
-
-18. **Additional Feature:**
-    - Explore the impact of adding the 'num_characters' feature to the dataset.
-
-### Step 6: Model Selection
-19. **Model Comparison:**
-    - Compare the performance of models with different approaches and features.
-
-20. **Model Selection:**
-    - Choose the best-performing model (Multinomial Naive Bayes) for further steps.
-
-### Step 7: Save Model and Vectorizer
-21. **Save Model and Vectorizer:**
-    - Pickle the TF-IDF vectorizer and Multinomial Naive Bayes model for future use.
-
-These steps provide an overview of the Spam Classification project, covering data cleaning, exploratory data analysis, text preprocessing, model building, and model improvement. The process concludes with the selection of the best-performing model for deployment.
+## [License](#license)
+- This project is licensed under the MIT License.
+  
+## [Acknowledgments](#acknowledgments)
+- Acknowledge the sources of libraries, algorithms, and datasets used in the project.
